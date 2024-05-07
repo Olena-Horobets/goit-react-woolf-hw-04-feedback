@@ -1,0 +1,16 @@
+.notification {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.message {
+  font-size: 36px;
+  color: var(--accent-color);
+}
+
+.emoji {
+  text-align: center;
+  font-size: 80px;
+}

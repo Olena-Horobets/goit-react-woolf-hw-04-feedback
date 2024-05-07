@@ -1,0 +1,123 @@
+.section {
+  width: 500px;
+  height: 550px;
+  background-color: var(--pale-grey-color);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px 75px;
+}
+
+.diagram {
+  position: relative;
+  width: 350px;
+  height: 350px;
+
+  background: linear-gradient(
+    0deg,
+    var(--gradient-base) 0% 10.3%,
+    var(--grad-accent) 10.5% 10.7%,
+    var(--gradient-base) 11% 20.3%,
+    var(--grad-accent) 20.5% 20.7%,
+    var(--gradient-base) 21% 30.3%,
+    var(--grad-accent) 30.5% 30.7%,
+    var(--gradient-base) 31% 40.3%,
+    var(--grad-accent) 40.5% 40.7%,
+    var(--gradient-base) 41% 50.3%,
+    var(--grad-accent) 50.5% 50.7%,
+    var(--gradient-base) 51% 60.3%,
+    var(--grad-accent) 60.5% 60.7%,
+    var(--gradient-base) 61% 70.3%,
+    var(--grad-accent) 70.5% 70.7%,
+    var(--gradient-base) 71% 80.3%,
+    var(--grad-accent) 80.5% 80.7%,
+    var(--gradient-base) 81% 90.3%,
+    var(--grad-accent) 90.5% 90.7%,
+    var(--gradient-base) 91% 100%
+  );
+}
+
+.caption {
+  position: absolute;
+  left: -80px;
+  bottom: 60px;
+  transform: rotateZ(-90deg);
+  font-size: 26px;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+.diagram::before {
+  content: '';
+  display: block;
+  height: 110%;
+  width: 2px;
+  background-color: var(--accent-color);
+}
+
+.diagram::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 110%;
+  background-color: var(--accent-color);
+}
+
+.stat {
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  background-color: var(--accent-color);
+  transition: height var(--basic-animation);
+}
+
+.goodStat {
+  composes: stat;
+  left: 10%;
+}
+
+.neutralStat {
+  composes: stat;
+  left: 40%;
+}
+
+.badStat {
+  composes: stat;
+  left: 70%;
+}
+
+.emoji {
+  position: absolute;
+  bottom: -36px;
+  font-size: 30px;
+}
+.goodEmoji {
+  composes: emoji;
+  left: 14%;
+}
+
+.neutralEmoji {
+  composes: emoji;
+  left: 44%;
+}
+
+.badEmoji {
+  composes: emoji;
+  left: 74%;
+}
+
+.goodVotesStat {
+  font-size: 24px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 30px;
+  width: 100%;
+  padding-top: 12px;
+  border-top: 2px dashed var(--accent-color);
+}

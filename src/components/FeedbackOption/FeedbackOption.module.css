@@ -1,0 +1,51 @@
+.feedbackOptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--pale-grey-color);
+  cursor: pointer;
+  transform: scale(1);
+
+  transition: transform var(--basic-animation),
+    background-color var(--basic-animation), color var(--basic-animation);
+}
+
+.option::before {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  content: '';
+  display: block;
+  width: 110%;
+  height: 110%;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.option:hover {
+  background-color: var(--primary-color);
+}
+
+.option:focus {
+  outline: none;
+}
+
+.option:active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: scale(0.85);
+}
+
+.emoji {
+  font-weight: normal;
+}
